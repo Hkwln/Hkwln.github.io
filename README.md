@@ -2,5 +2,4 @@
 
 ## Hardware
 
-- Adding more buttons to radiomaster [Pocket](./articles/get_more_pocket.md)
-
+- [Radiomaster Pocket upgrades](./articles/get_more_pocket.md)

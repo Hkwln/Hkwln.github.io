@@ -1,29 +1,40 @@
-# The aim of this guide is to add more buttons to the radiomaster pocket
+# The aim of this guide is to add more buttons to the Radiomaster Pocket
 
 ## How?
 
-Because the chip of the rm pocket is the same as in the rm zorro
-you can add 2 2 pos switches and one three pos switch
+Because the chip of the rm Pocket is the same as in the rm Zorro,
+and the Zorro has three more switches than the pocket,
+you can add two 2 position switches and one 3 position switch
+to your rm Pocket for free.
 
-## how it works
+In the Following i explain a bit about how to do that:
 
 ### hardware
 
-these are the chips which you should solder on with a copper wire
+These are the chips which you should solder on with a copper wire
 ![stm32 chip](../pictures/stm32_chip_pins.png)
-[datasheet](https://datasheet.octopart.com/STM32F407IET6-STMicroelectronics-datasheet-181247466.pdf)
+[Datasheet source](https://datasheet.octopart.com/STM32F407IET6-STMicroelectronics-datasheet-181247466.pdf)
 
-### software
+The bottom and right thin copper wire go to the middle of the trim switch- button,
+the upper one is a brand new three pos switch you can wire together
+with ground anywhere you want.
+Be carefull not to bridge anything on the board.
 
-Because edgetx blocks installing non native bins(everything exept radiomaster pocket .bin)
+### Software
 
-#### steps to make
+Because Edgetx blocks installing non native bins
+(everything is blocked exept radiomaster pocket .bin),
+you have to install the radiomaster zorro .bin different ways.
+Following way is flashing via stm32 bootloader with a Linux laptop.
 
-- take download a zorro build .bin
-- connect pocket with laptop
-- look if pocket offers as a stm32:
+#### steps
 
-For example it should look like this:
+- take download a zorro build .bin(e.g from Edgetx buddy)
+- install dfu-util on your Linux system
+- connect rm pocket via data cable with laptop
+- rm pocket should offer its stm-32 bootloader
+
+E.g it should look like this:
 
 ```bash
 > dfu-util -l                                                                                                                                16:32:46
@@ -42,10 +53,12 @@ Found DFU: \[0483:df11\] ver=2200, devnum=72, cfg=1, intf=0, path="1-3", alt=0, 
 ```
 
 - @internal flash is the is the correct place to flash on
-- then your flash command would look like this:
+- you flash e.g with following command:
 
 ```bash
 sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000:leave -D v2.12.5-zorro.bin
 ```
 
-- bind your buttons to channel and look if everything has worked
+- wait until the command has finished and your stm32 pocket has restarted
+  now you can unplug the pocket and check if you have the new zorro firmware,
+  now you can bind your buttons to channel and use them as you want :)
