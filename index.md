@@ -1,4 +1,6 @@
-# Hkwln.github.io
+---
+layout: home
+---
 
 ## Hardware
 

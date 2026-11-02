@@ -1,9 +1,14 @@
-remote_theme: sylhare/Type-on-Strap
 title: Paul's blog
-eader_text: Blog about my projects.
+description: >-
+  Hardware tips and project write-ups — RadioMaster Pocket upgrades,
+  electronics and other stuff I've done.
 
-# BLOG CONFIGURATION
-post_navigation: true
-paginate: 10
-paginate_path: "blog/page:num"
-plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
+theme: minima
+show_excerpts: true
+
+# Header navigation: only these pages appear in the nav bar
+header_pages:
+  - about.md
+
+# Social (shows a GitHub icon in the footer)
+github_username: Hkwln

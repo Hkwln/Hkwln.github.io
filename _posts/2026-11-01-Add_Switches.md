@@ -1,4 +1,9 @@
-# Add switches
+---
+layout: post
+title: "RadioMaster Pocket: adding switches"
+date: 2026-10-30
+categories: hardware
+---
 
 Skills/tools needed:
 Soldering, a bit Linux
