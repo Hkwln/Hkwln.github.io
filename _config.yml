@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
+remote_theme: sylhare/Type-on-Strap
 title: Paul's blog
-description: Bookmark this to see some helpfull tips!
+eader_text: Blog about my projects.
+
+# BLOG CONFIGURATION
+post_navigation: true
+paginate: 10
+paginate_path: "blog/page:num"
+plugins: [jekyll-paginate, jekyll-seo-tag, jekyll-feed]
