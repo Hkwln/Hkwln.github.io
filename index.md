@@ -4,4 +4,4 @@ layout: home
 
 ## Hardware
 
-- [Radiomaster Pocket upgrades](./articles/get_more_pocket.md)
+- [Radiomaster Pocket upgrades](/_posts/2026-11-01-Add_Switches.md)
