@@ -30,10 +30,13 @@ to your rm Pocket for free.
 
 In the Following I will explain a bit about how to do that:
 
-### hardware
+### Hardware
 
 These are the chips which you should solder on with a copper wire:
-![stm32 chip](/pictures/stm32_chip_pins.png)
+
+<img src="/pictures/stm32_chip_pins.png" alt="stm32 chip pins" width="300" height="300">
+<img src="/pictures/stm32.jpg" alt="stm32 soldered" width="300" height="300">
+
 [^2]
 
 The bottom and right thin copper wire go to the middle of the trim switch button,
@@ -42,10 +45,12 @@ with ground anywhere you want.
 I did wire the switch to the back so I can connect it with a standard connector:
 
  <img src="/pictures/backside_pocket.jpg" alt="backside rm pocket" width="300" style="display: block; margin: 0 auto;">
+ <img src="/pictures/frontside_pocket.jpg" alt="frontside rm pocket" width="300" style="display: block; margin: 0 auto;">
 
 Be careful not to short anything on the stm32, not like i did [^3]:
 
-<img src="/pictures/short_stm32.jpg" alt="shorted" width="200">
+<img src="/pictures/short_stm32.jpg" alt="shorted" width="200" height="300">
+<img src="/pictures/short2_stm32.jpg" alt="shorted" width="200" height="300">
 
 ### Software
 
@@ -101,7 +106,7 @@ sudo dfu-util -a 0 -d 0483:df11 --dfuse-address 0x08000000:leave -D v2.12.5-zorr
 
 [^1]: Video tutorial (not from me)[vid](https://www.youtube.com/watch?v=zxzVlCIHbjg)
 
-[^2]: the pin numbering can be found in the Datasheet: [Datasheet source](https://datasheet.octopart.com/STM32F407IET6-STMicroelectronics-datasheet-181247466.pdf)
+[^2]: Datasheet side: [source](https://datasheet.octopart.com/STM32F407IET6-STMicroelectronics-datasheet-181247466.pdf)
 
 [^3]:
     For me it was not that bad, that i shorted the stm32, the pocket just has not turned on, i checked the chip and found it.
